@@ -1,0 +1,370 @@
+/* HOMEPAGE STYLING */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    user-select: none;
+    /* pointer-events: none; */
+}
+body.modal-open {
+    overflow: hidden;
+}
+.header-container {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 10px;
+}
+header {
+    /* background-color: rgba(240, 240, 240, 0.5);;
+    padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+#logo {
+    padding: 10px 15px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Montez', cursive;
+    color: blue;
+}
+#subheading {
+    padding-left: 15px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+}
+.buttons-container {
+    display: flex;
+    align-items: flex-start;
+}
+#sign-in,
+#sign-up {
+    background-color: blue;
+    color: #ffffff;
+    padding: 8px 18px;
+    border: 2px solid blue;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    transition:box-shadow 0.5s, background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+#sign-in:hover,
+#sign-up:hover {
+    background-color: #ffffff;
+    color: blue;
+    border: 2px solid blue;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Sign-up modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 9.6% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-content hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6c6b6b;
+}
+.modal-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #6c6b6b;
+    margin-bottom: 5px;
+}
+.modal-content input {
+    padding: 3%;
+    margin-top: 8.5px;
+    margin-bottom: 17.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.sign-up-submit {
+    margin-top: 10px;
+    background-color: rgb(73, 186, 73);
+    color: whitesmoke;
+    padding: 10px 80px;
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.sign-up-submit:hover {
+    background-color: whitesmoke;
+    color: rgb(73, 186, 73);
+    border: 2px solid rgb(73, 186, 73);
+    cursor: pointer;
+}
+
+
+/* Sign-in modal styling */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 9.7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-content2 hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6c6b6b;
+}
+.modal-content2 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #6c6b6b;
+    margin-bottom: 5px;
+}
+.modal-content2 input {
+    padding: 3%;
+    margin-top: 8.5px;
+    margin-bottom: 17.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+}
+.close2 {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info2 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.sign-in-submit {
+    margin-top: 10px;
+    background-color: rgb(73, 186, 73);
+    color: whitesmoke;
+    padding: 10px 80px;
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.sign-in-submit:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: rgb(73, 186, 73);
+    border: 2px solid rgb(73, 186, 73);
+}
+.modal2 h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-left: 25%;
+}
+.modal2 a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: blue;
+    transition: color 0.5s;
+}
+.modal2 a:hover {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+
+/* Posts button styling */
+.posts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19.3%;
+}
+#all-posts-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+.posts-container button {
+    background-color: rgb(243, 213, 47);
+    color: black;
+    border: 2.5px solid whitesmoke;
+    padding: 12px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 2.5px;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.posts-container button span {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.posts-container button:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 2.5px solid rgb(243, 213, 47);
+}
+
+
+/* Create post modal styling */
+.modal3 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content3 {
+    background-color: #fefefe;
+    margin: 4.9% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-content3 hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6c6b6b;
+}
+.modal-content3 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #6c6b6b;
+    margin-bottom: 5px;
+}
+.modal-content3 input {
+    padding: 1%;
+    margin-top: 8.5px;
+    margin-bottom: 17.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+}
+.close3 {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+.close3:hover,
+.close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info3 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+#my {
+    height: 400px;
+    padding: 1%;
+    margin-top: 8.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+    resize: none;
+}
+#my::placeholder {
+    font-family: 'Your Desired Font', sans-serif;
+}
+.modal-content3 button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background: rgb(73, 186, 73);
+    color: whitesmoke;
+    margin-left: 45%;
+    margin-top: 22px;
+    padding: 1%;
+    width: 10%;
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.5px;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.modal-content3 button:hover {
+    background: whitesmoke;
+    color: rgb(73, 186, 73);
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.7px;
+    cursor: pointer;
+}

@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* font-family: 'Ubuntu Mono', monospace; */
+    background-color: #ffeedd;
+    user-select: none;
+}
+body.modal-open {
+    overflow: hidden;
+}
+.header-container {
+    background-color: #ffeedd;
+    padding: 10px;
+}
+header {
+    /* background-color: rgba(240, 240, 240, 0.5);;
+    padding: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+#logo {
+    padding: 10px 15px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Montez', cursive;
+    color: blue;
+}
+#logo a {
+    text-decoration: none;
+    color: blue;
+}
+#subheading {
+    padding-left: 15px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 18px;
+}
+.buttons-container {
+    display: flex;
+    align-items: flex-start;
+}
+#sign-in,
+#sign-up {
+    background-color: blue;
+    color: #ffffff;
+    padding: 8px 18px;
+    border: 2px solid blue;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+#sign-in:hover,
+#sign-up:hover {
+    background-color: #ffffff;
+    color: blue;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+/* Sign-up modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 9.7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-content hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6c6b6b;
+}
+.modal-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #6c6b6b;
+    margin-bottom: 5px;
+}
+.modal-content input {
+    padding: 3%;
+    margin-top: 8.5px;
+    margin-bottom: 17.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.sign-up-submit {
+    margin-top: 10px;
+    background-color: rgb(73, 186, 73);
+    color: whitesmoke;
+    padding: 10px 80px;
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.sign-up-submit:hover {
+    background-color: whitesmoke;
+    color: rgb(73, 186, 73);
+    border: 2px solid rgb(73, 186, 73);
+    cursor: pointer;
+}
+
+/* Sign-in modal styling */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 9.7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal-content2 hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6c6b6b;
+}
+.modal-content2 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #6c6b6b;
+    margin-bottom: 5px;
+}
+.modal-content2 input {
+    padding: 3%;
+    margin-top: 8.5px;
+    margin-bottom: 17.5px;
+    border: none;
+    border-radius: 2.5px;
+    background: #e2e0e0;
+}
+.close2 {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    right: 18px;
+}
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.info2 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.sign-in-submit {
+    margin-top: 10px;
+    background-color: rgb(73, 186, 73);
+    color: whitesmoke;
+    padding: 10px 80px;
+    border: 2px solid rgb(73, 186, 73);
+    border-radius: 2.5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+.sign-in-submit:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: rgb(73, 186, 73);
+    border: 2px solid rgb(73, 186, 73);
+}
+.modal2 h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 15px;
+    margin-left: 25%;
+}
+.modal2 a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: blue;
+    transition: color 0.5s;
+}
+.modal2 a:hover {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+/* Posts container */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Post card styles */
+.post-card {
+    display: flex;
+    position: relative;
+    width: 40%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s;
+    transition: transform 0.3s ease-in-out;
+}
+.post-card.animate-removal {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+.post-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.post-card p {
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0;
+}
+.post-title {
+    font-family: 'Poppins', sans-serif;
+    color: #949292;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+.post-card .post-content {
+    margin-top: 10px;
+}
+.post-card .post-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.left-content {
+    height: 100%;
+    font-weight: bolder;
+    font-size: larger;
+    width: 15%;
+    color: #818080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.left-content p {
+    margin: 0;
+}
+.right-content{
+    width: 85%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.delete-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color:#aaa;
+    transition: color 0.3s;
+}
+.ellipsis-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+.ellipsis-link {
+    text-decoration: none;
+    color: inherit;
+}
+.delete-icon:hover,
+.ellipsis-icon:hover {
+    cursor: pointer;
+    color: black;
+}
+
+
+/* Delete modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    top: 18%;
+    background-color: #fefefe;
+    margin: 9.7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content p {
+    font-family: 'Poppins', sans-serif;
+    color:rgb(0, 0, 0);
+    font-size: larger;
+    margin-left: 3%;
+}
+.modal-content button {
+    width: 75px;
+    height: 70%;
+    margin: 5px;
+}
+#delete-yes {
+    color: whitesmoke;
+    background-color: rgb(73, 186, 73);
+    border: 2px solid  rgb(73, 186, 73);
+    border-radius: 2.5px;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+#delete-yes:hover {
+    color: rgb(73, 186, 73);
+    background-color: whitesmoke;
+    border: 2px solid rgb(73, 186, 73);
+    cursor: pointer;
+}
+#delete-no {
+    color: whitesmoke;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 2.5px;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
+}
+#delete-no:hover {
+    color: red;
+    background-color: whitesmoke;
+    border-color: red;
+    border: 2px solid red;
+    cursor: pointer;
+}
+

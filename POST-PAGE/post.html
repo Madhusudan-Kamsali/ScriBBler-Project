@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Page</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div id="logo"><a href="/HOME-PAGE/index.html">ScriBBler</a></div>
+            <div id="subheading">Explore, Imagine, Create</div>
+        </div>
+        <div class="buttons-container">
+            <button id="sign-up">Sign Up</button>
+            <button id="sign-in">Sign In</button>
+        </div>
+    </header>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close"><i class="fas fa-times"></i></span>
+            <h2>Get Started</h2>
+            <hr>
+                <label for="name" class="info">Name</label>
+                <input type="text" placeholder="Enter your name" required>
+                <label for="username" class="info">Username</label>
+                <input type="text" placeholder="Enter your username" required>
+                <label for="password" class="info">Password</label>
+                <input type="password" placeholder="Enter your password" required>
+                <label for="confirm-password" class="info">Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" required>
+                <button class="sign-up-submit">Sign Up</button>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <span class="close2"><i class="fas fa-times"></i></span>
+            <h2>Welcome Back!</h2>
+            <hr>
+            <label for="username" class="info2">Username</label>
+            <input type="text" placeholder="Enter your username" required>
+            <label for="password" class="info2">Password</label>
+            <input type="password" placeholder="Enter your password" required>
+            <button class="sign-in-submit">Sign In</button>
+            <h4>Not a member? <a href="#">Sign Up</a></h4>
+        </div>
+    </div>
+
+    <main class="post-container">
+        <div class="post-container">
+            <h3 class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</h3>
+            <p class="post-author">Srishti Gupta</p>
+            <button class="edit-btn"> Edit <i class="fas fa-edit"></i></button>
+            <div class="post-content">
+                <!-- Post text goes here -->
+                <p>Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                    named xyz. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ipsum numquam eveniet laborum porro excepturi esse nemo est maiores possimus aut facere nam nulla fugit voluptates sint ipsam vel nihil ut tenetur illum labore, minus culpa fugiat! Totam facere, quod voluptatibus quas fugiat amet exercitationem! Aut quia nesciunt quod laudantium illo corporis praesentium eveniet possimus assumenda deleniti voluptas nostrum sunt tempore, incidunt ipsa commodi impedit nulla quasi veritatis totam. Modi aliquam, itaque, recusandae provident ut enim expedita dolores est sint quas architecto nisi beatae excepturi nam dicta nihil eaque eius omnis vero? Quae, quasi nobis? Esse illo voluptas maiores repellat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fuga autem et voluptas voluptatem dolorem ratione dicta non omnis enim deleniti corporis, placeat modi laudantium, quod velit? Voluptates, quae, esse officiis quia cumque quis impedit nulla maiores sint fuga quidem quisquam explicabo. Quam rem, aliquid dolores mollitia, veniam, neque doloremque sed incidunt tempore quis libero odio! Voluptas, voluptates molestiae fugit voluptatibus, vel exercitationem perferendis beatae, quas reprehenderit nemo sequi laudantium aspernatur ad nesciunt ut quam.</p>
+            </div>
+            <button class="like-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+            <p class="like-text">Be the first one to like this!</p>
+            <textarea class="comment-input" placeholder="Leave a comment..."></textarea>
+            <button class="comment-btn">Comment</button>
+            <div class="comments">
+                <!-- All comments go here -->
+            </div>
+        </div>
+    </main>
+    
+    <script src="post.js"></script>
+</body>
+</html>
