@@ -144,6 +144,18 @@ header {
     border: 2px solid rgb(73, 186, 73);
     cursor: pointer;
 }
+.modal-content form input[type="text"],
+.modal-content form input[type="password"],
+.modal-content form button.sign-up-submit {
+    width: 100%; 
+}
+.modal-content form input[type="text"],
+.modal-content form input[type="password"] {
+    width: 100%;
+    max-width: 360px; 
+}
+
+
 
 
 /* Sign-in modal styling */
@@ -238,6 +250,17 @@ header {
     text-decoration: none;
     color: blueviolet;
 }
+.modal-content2 form input[type="text"],
+.modal-content2 form input[type="password"],
+.modal-content2 form button.sign-in-submit {
+    width: 100%;
+}
+.modal-content2 form input[type="text"],
+.modal-content2 form input[type="password"] {
+    width: 100%;
+    max-width: 360px; 
+}
+
 
 
 /* Posts button styling */
@@ -337,7 +360,7 @@ header {
     flex-direction: column;
 }
 #my {
-    height: 400px;
+    height: 380px;
     padding: 1%;
     margin-top: 8.5px;
     border: none;
@@ -354,7 +377,7 @@ header {
     background: rgb(73, 186, 73);
     color: whitesmoke;
     margin-left: 45%;
-    margin-top: 22px;
+    /* margin-top: 10px; */
     padding: 1%;
     width: 10%;
     border: 2px solid rgb(73, 186, 73);
@@ -367,4 +390,15 @@ header {
     border: 2px solid rgb(73, 186, 73);
     border-radius: 2.7px;
     cursor: pointer;
+}
+
+.modal-content3 input[type="text"],
+.modal-content3 textarea {
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
 }

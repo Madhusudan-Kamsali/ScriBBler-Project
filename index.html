@@ -31,6 +31,7 @@
             <span class="close"><i class="fas fa-times"></i></span>
             <h2>Get Started</h2>
             <hr>
+            <form id="signup-form">
                 <label for="name" class="info">Name</label>
                 <input type="text" placeholder="Enter your name" required>
                 <label for="username" class="info">Username</label>
@@ -40,6 +41,7 @@
                 <label for="confirm-password" class="info">Confirm Password</label>
                 <input type="password" placeholder="Re-enter your password" required>
                 <button class="sign-up-submit">Sign Up</button>
+            </form>    
         </div>
     </div>
 
@@ -48,11 +50,13 @@
             <span class="close2"><i class="fas fa-times"></i></span>
             <h2>Welcome Back!</h2>
             <hr>
-            <label for="username" class="info2">Username</label>
-            <input type="text" placeholder="Enter your username" required>
-            <label for="password" class="info2">Password</label>
-            <input type="password" placeholder="Enter your password" required>
-            <button class="sign-in-submit">Sign In</button>
+            <form id="signin-form">
+                <label for="username" class="info2">Username</label>
+                <input type="text" placeholder="Enter your username" required>
+                <label for="password" class="info2">Password</label>
+                <input type="password" placeholder="Enter your password" required>
+                <button class="sign-in-submit">Sign In</button>
+            </form>
             <h4>Not a member? <a href="#">Sign Up</a></h4>
         </div>
     </div>
@@ -67,11 +71,13 @@
             <span class="close3"><i class="fas fa-times"></i></span>
             <h2>Pen Your Post</h2>
             <hr>
-            <label for="title" class="info3">Title</label>
-            <input type="text" placeholder="Enter title of your post" required>
-            <label for="contents" class="info3">Contents</label>
-            <textarea id="my" cols="30" rows="10" placeholder="Enter the contents of your post"></textarea>
-            <button class="create-submit">Create</button>
+            <form id="post-form">
+                <label for="title" class="info3">Title</label>
+                <input type="text" placeholder="Enter title of your post" required>
+                <label for="contents" class="info3">Contents</label>
+                <textarea id="my" cols="30" rows="10" placeholder="Enter the contents of your post"></textarea>
+                <button class="create-submit">Create</button>
+            </form>
         </div>
     </div>
 

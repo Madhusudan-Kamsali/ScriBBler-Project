@@ -21,7 +21,7 @@ const editBtn = document.querySelector('.edit-btn');
 const postTitle = document.querySelector('.post-title');
 const postContent = document.querySelector('.post-content');
 const saveBtn = document.createElement('button');
-saveBtn.classList.add('edit-btn'); // Apply same class as edit button
+saveBtn.classList.add('edit-btn');
 saveBtn.innerHTML = 'Save <i class="fas fa-save"></i>';
 // Apply styles to position the save button
 saveBtn.style.position = 'relative';
@@ -31,27 +31,25 @@ editBtn.addEventListener('click', function() {
     // Toggle between edit and save modes
     if (editBtn.textContent.trim() === 'Edit') {
         // Enter edit mode
-        editBtn.textContent = ''; // Clear text content
-        editBtn.appendChild(saveBtn); // Replace text content with save button
-        postTitle.contentEditable = true; // Make post title editable
-        postContent.contentEditable = true; // Make post content editable
+        editBtn.textContent = ''; 
+        editBtn.appendChild(saveBtn); 
+        postTitle.contentEditable = true; 
+        postContent.contentEditable = true; 
         // Set explicit border properties for post title and content
-        postTitle.style.border = '1px solid red'; // Add red border
-        // Removed the line that changes the height of the post title border
-        // postTitle.style.height = 'auto'; // Reset height for post title
-        postTitle.style.padding = '5px'; // Add padding for better appearance
-        postContent.style.border = '1px solid red'; // Add red border
-        postTitle.style.outline = 'none'; // Remove default input outline
-        postContent.style.outline = 'none'; // Remove default textarea outline
-        postTitle.focus(); // Set focus on post title
+        postTitle.style.border = '1px solid red'; 
+        postTitle.style.padding = '5px'; 
+        postContent.style.border = '1px solid red';
+        postTitle.style.outline = 'none'; 
+        postContent.style.outline = 'none'; 
+        postTitle.focus();
     } else {
         // Save changes
-        editBtn.innerHTML = 'Edit <i class="fas fa-edit"></i>'; // Reset edit button content
-        postTitle.contentEditable = false; // Make post title non-editable
-        postContent.contentEditable = false; // Make post content non-editable
-        postTitle.style.border = 'none'; // Remove border
-        postTitle.style.padding = '0'; // Reset padding
-        postContent.style.border = 'none'; // Remove border
+        editBtn.innerHTML = 'Edit <i class="fas fa-edit"></i>';
+        postTitle.contentEditable = false;
+        postContent.contentEditable = false;
+        postTitle.style.border = 'none';
+        postTitle.style.padding = '0';
+        postContent.style.border = 'none';
     }
 });
 

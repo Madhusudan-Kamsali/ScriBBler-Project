@@ -69,7 +69,7 @@ header {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -79,11 +79,10 @@ header {
 }
 .modal-content {
     background-color: #fefefe;
-    margin: 9.7% auto;
+    margin: 9.6% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 25%;
-    height: 400px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -143,6 +142,19 @@ header {
     border: 2px solid rgb(73, 186, 73);
     cursor: pointer;
 }
+.modal-content form input[type="text"],
+.modal-content form input[type="password"],
+.modal-content form button.sign-up-submit {
+    width: 100%; 
+}
+.modal-content form input[type="text"],
+.modal-content form input[type="password"] {
+    width: 100%;
+    max-width: 360px; 
+}
+
+
+
 
 /* Sign-in modal styling */
 .modal2 {
@@ -236,6 +248,19 @@ header {
     text-decoration: none;
     color: blueviolet;
 }
+.modal-content2 form input[type="text"],
+.modal-content2 form input[type="password"],
+.modal-content2 form button.sign-in-submit {
+    width: 100%;
+}
+.modal-content2 form input[type="text"],
+.modal-content2 form input[type="password"] {
+    width: 100%;
+    max-width: 360px; 
+}
+
+
+
 
 /* Posts container */
 .posts-container {
